@@ -1,0 +1,287 @@
+/* ===============================  Generalitees  ================================== */
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body{
+      /* source pour le fond https://www.magicpattern.design/tools/css-backgrounds */
+      /* background-color: #e5e5f7;
+      opacity: 1;
+      background-image: linear-gradient(135deg, #496f4933 25%, transparent 25%), linear-gradient(225deg, #496f4933 25%, transparent 25%), linear-gradient(45deg, #496f4933 25%, transparent 25%), linear-gradient(315deg, #496f4933 25%, #e5e5f7 25%);
+      background-position: 10px 0, 10px 0, 0 0, 0 0;
+      background-size: 10px 10px;
+      background-repeat: repeat; */
+      background-color: #052205;
+
+}
+
+
+ul, ol {
+    padding: 0;
+}
+
+li+li {
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    display: block;
+    cursor: pointer;
+}
+
+input+button {
+    margin-top: 15px;
+    display: inline-block;
+}
+
+header {
+    display: flex;
+    background-color: #011401;
+    color: #FFFFFF;
+    gap: 3em;
+    height: 6em;
+    padding: 2em;
+    font-size: 2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header_img{
+    width: 300px;
+
+}
+img.reverse{
+    transform: scaleX(-1);
+}
+.blue {
+    color: blue;
+}
+
+/*.dark_back{
+    background-color: rgb(6, 15, 6);
+}
+ .green_back{
+    background-color: green;
+} */
+
+
+
+/* ======================     Classes Specifiques    =========================== */
+
+.home_page {
+    text-align: center;
+    background-image: url("../images/site_images/falling-cards.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.bck_inactive.home_page{
+    background-image: none;
+}
+
+.players_entry {
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 800px;
+    align-self: center;
+    margin: 150px auto;
+    border-radius: 50px;
+    background-color: #0e440e;
+    color: #FFFFFF;
+}
+
+
+.players_entry h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 28px;
+}
+
+.players_entry input{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 60px;
+    padding: 10px;
+    font-weight: 600;
+    color: rgb(121, 6, 6);
+
+        outline: none;
+
+}
+
+.players_entry input {
+    border-radius: 20px;
+    text-align: center;
+
+
+}
+.players_entry button, button.new_game {
+    font-size: 25px;
+    padding: 1em;
+    border: none ;
+    background-color: rgb(6, 15, 6);
+    color: #FFFFFF;
+    width: 6em;
+    border-radius: 20px;
+    margin: 2em auto;
+    width: 8em;
+    
+}
+.players_entry button:hover, button.new_game:hover{
+    color: #060f06;
+    background-color: #FFFFFF;
+}
+
+.gameboard_wrapper {
+    margin-top: 5em;
+    margin-bottom: 3em;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.player_space_wrapper {
+    flex-basis: 20%;
+}
+.player_space.inactive {
+    color: grey;
+}
+
+.player_space_wrapper h4 {
+    
+    width: 350px;
+    margin: 10px;
+    font-size: 20px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    height: 3.7em;
+}
+
+.player_space {
+    align-items: center;
+    background-color: #d6ecd6;
+    border: 4px solid  #d6ecd6;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 20px;
+    min-width: 350px;
+}
+.player_space h2{
+    font-size: 1.3em;
+}
+.player_name {
+    color: steelblue;
+}
+
+.element_hidden {
+    visibility: hidden;
+}
+
+.play_buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.play_buttons button {
+    padding: 5px 30px;
+    background-color: cadetblue;
+    border: none;
+    cursor: pointer;
+}
+.play_buttons button:hover{
+    background-color: rgb(20, 37, 37);
+    color: #ffffff;
+}
+
+
+
+.players_cards ul {
+    padding: 1em;
+    display: flex;
+    height: 180px;
+}
+
+.players_cards li:not(:nth-child(1)) {
+    list-style: none;
+    margin-left: -60px;
+}
+
+.players_cards li:nth-child(1) {
+    list-style: none;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.players_cards img {
+    max-width: 10ch;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.winner_confetti{
+    position: absolute;
+    margin-left: -160px;
+    margin-top: -23px;
+    overflow: auto;
+    width: 322px;
+    border-radius: 40px;
+
+}
+.congrats{
+ padding-top: 3em ;
+ font-size: 2.3em;
+ color: yellow;
+ height: 15vh;
+}
+
+.inactivePlayer {
+    opacity: 0.5;
+    pointer-events: none;
+    color: grey;
+}
+.playerLost{
+    border: 4px solid rgb(247, 5, 5);
+    pointer-events: none;
+    color: grey;
+
+}
+.playerStop {
+    opacity: 0.5;
+    border: 4px solid rgb(38, 212, 67);
+    pointer-events: none;
+    color: grey;
+
+}
+.white_text{
+    color: #FFFFFF;
+}
+

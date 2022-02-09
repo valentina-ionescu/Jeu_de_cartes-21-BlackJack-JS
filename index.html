@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Valentina Ionescu">
+    <meta name="description" content="TP1 - Jeux de cartes 21 - BlackJack - en classes ES6">
+    <title>Jeux de cartes - 21 - Black Jack</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+
+    <!-- JS - Scripts -->
+    <script src="./jsScripts/Game.js"></script>
+    <script src="./jsScripts/Card.js"></script>
+    <script src="./jsScripts/Player.js"></script>
+    <script src="./jsScripts/Board.js"></script>
+    <script src="./jsScripts/scripts.js" defer></script>
+
+
+</head>
+
+<body>
+    <main class="dark_back home_page " data-js-main>
+
+        <header>
+            <img class="header_img reverse" src="images/site_images/card_suits.png" alt="">
+            <h1> 21 - Fun</h1>
+            <img class="header_img " src="images/site_images/card_suits.png" alt="">
+        </header>
+
+        <form class=" players_entry" data-js-form>
+            <h2>Entrez le Nombre de Joueurs (de 1 à 4 ) </h2>
+            <label class="hidden " for="qtyPlayers">Entrer le Nombre de Joueurs</label>
+            <input required type="number" id="qtyPlayers" name="qtyPlayers" min="1" max="4" value="3">
+            <button>OK!</button>
+        </form>
+
+        <h2 class="congrats" data-js-congrats></h2>
+
+        <div class="gameboard_wrapper" data-js-players-wrapper>
+            
+
+        </div>
+
+        <div ><p class="white_text hidden" data-js-counter-wrapper>Partie No: <span data-js-game-counter ></span></p></div>
+        <button class="new_game hidden" data-js-new-game>New Game!</button>
+
+
+
+
+
+
+    </main>
+
+</body>
+
+</html>
